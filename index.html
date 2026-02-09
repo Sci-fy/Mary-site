@@ -49,16 +49,30 @@
         .nav-link:hover::after {
             width: 100%;
         }
+        .logo-text {
+            background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
     </style>
 </head>
 <body class="poppins bg-gray-50">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
-        <div class="container mx-auto px-4 py-4">
+        <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <h1 class="playfair text-2xl font-bold text-gray-800">MARY ASEGBA</h1>
-                    <span class="ml-2 px-2 py-1 bg-gold text-white text-xs rounded">FASHION BRAND</span>
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center mr-3">
+                            <i class="fas fa-crown text-white"></i>
+                        </div>
+                        <div>
+                            <h1 class="playfair text-2xl font-bold text-gray-800">MARY ASEGBA</h1>
+                            <p class="text-xs text-gray-600 -mt-1">FASHION BRAND</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="hidden md:flex space-x-8">
@@ -95,7 +109,7 @@
                     <p class="text-lg mb-2"><i class="fas fa-map-marker-alt text-gold mr-2"></i>Lassandi, Jalingo</p>
                     <p class="text-lg">Where style meets craftsmanship</p>
                 </div>
-                <a href="#products" class="inline-block bg-gold hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">View Our Products</a>
+                <a href="#products" class="inline-block bg-gold hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">Shop Our Collection</a>
             </div>
         </div>
     </section>
@@ -177,14 +191,14 @@
                 </div>
             </div>
             
-            <!-- Products Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Products Grid - 2 Columns Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Product 1: Clothing -->
                 <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="clothing">
                     <div class="overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Beautiful African Dress" 
-                             class="product-image w-full h-64 object-cover">
+                             class="product-image w-full h-72 object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
@@ -194,8 +208,8 @@
                         <p class="text-gray-600 mb-4">Elegant handmade dress with vibrant African prints, perfect for special occasions.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gold font-bold text-lg">₦15,000</span>
-                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="1">
-                                View Details
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="1">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
                             </button>
                         </div>
                     </div>
@@ -206,7 +220,7 @@
                     <div class="overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Handmade Tote Bag" 
-                             class="product-image w-full h-64 object-cover">
+                             class="product-image w-full h-72 object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
@@ -216,8 +230,8 @@
                         <p class="text-gray-600 mb-4">Stylish and durable handmade tote bag with unique patterns, perfect for everyday use.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gold font-bold text-lg">₦8,500</span>
-                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="2">
-                                View Details
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="2">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
                             </button>
                         </div>
                     </div>
@@ -228,7 +242,7 @@
                     <div class="overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Bonnet Cap" 
-                             class="product-image w-full h-64 object-cover">
+                             class="product-image w-full h-72 object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
@@ -238,8 +252,8 @@
                         <p class="text-gray-600 mb-4">Hand-embroidered bonnet cap with delicate patterns, offering both style and comfort.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gold font-bold text-lg">₦6,500</span>
-                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="3">
-                                View Details
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="3">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
                             </button>
                         </div>
                     </div>
@@ -250,7 +264,7 @@
                     <div class="overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Modern Top" 
-                             class="product-image w-full h-64 object-cover">
+                             class="product-image w-full h-72 object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
@@ -260,8 +274,8 @@
                         <p class="text-gray-600 mb-4">Beautifully embroidered blouse with intricate details, perfect for both casual and formal occasions.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gold font-bold text-lg">₦12,000</span>
-                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="4">
-                                View Details
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="4">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
                             </button>
                         </div>
                     </div>
@@ -272,7 +286,7 @@
                     <div class="overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Leather Tote Bag" 
-                             class="product-image w-full h-64 object-cover">
+                             class="product-image w-full h-72 object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
@@ -282,8 +296,8 @@
                         <p class="text-gray-600 mb-4">Elegant leather tote bag with multiple compartments, combining functionality with style.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gold font-bold text-lg">₦18,000</span>
-                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="5">
-                                View Details
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="5">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
                             </button>
                         </div>
                     </div>
@@ -294,7 +308,7 @@
                     <div class="overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                              alt="Fashionable Cap" 
-                             class="product-image w-full h-64 object-cover">
+                             class="product-image w-full h-72 object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
@@ -304,8 +318,96 @@
                         <p class="text-gray-600 mb-4">Trendy bonnet cap with modern design, offering both protection from the sun and style.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-gold font-bold text-lg">₦7,200</span>
-                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="6">
-                                View Details
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="6">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7: Clothing -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="clothing">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Traditional Outfit" 
+                             class="product-image w-full h-72 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Traditional Outfit</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Clothing</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Complete traditional outfit with matching accessories, perfect for cultural events.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦25,000</span>
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="7">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8: Tote Bag -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="bags">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Patterned Tote Bag" 
+                             class="product-image w-full h-72 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Patterned Tote Bag</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Tote Bag</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Colorful patterned tote bag with ample space for all your daily essentials.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦9,500</span>
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="8">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 9: Bonnet Cap -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="caps">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Sun Protection Cap" 
+                             class="product-image w-full h-72 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Sun Protection Cap</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Bonnet Cap</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Wide-brimmed bonnet cap for maximum sun protection while maintaining style.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦8,000</span>
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="9">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 10: Clothing -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="clothing">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Evening Gown" 
+                             class="product-image w-full h-72 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Evening Gown</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Clothing</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Elegant evening gown with intricate beadwork, perfect for formal events and parties.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦35,000</span>
+                            <button class="order-btn bg-gold hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded transition duration-300" data-product="10">
+                                <i class="fas fa-shopping-cart mr-2"></i>Order Now
                             </button>
                         </div>
                     </div>
@@ -366,18 +468,16 @@
                         </div>
                         
                         <div class="mt-8">
-                            <h4 class="font-bold text-gray-800 text-lg mb-4">Follow Us</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center text-white">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center text-white">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center text-white">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </div>
+                            <h4 class="font-bold text-gray-800 text-lg mb-4">Order Via WhatsApp</h4>
+                            <a href="https://wa.me/2348122207484?text=Hello%20Mary%20Asegba%20Fashion%20Brand!%20I'm%20interested%20in%20your%20products." 
+                               target="_blank"
+                               class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                                <div class="text-left">
+                                    <div class="font-bold">Chat on WhatsApp</div>
+                                    <div class="text-sm">Click to place your order</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -416,59 +516,29 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <h2 class="playfair text-2xl font-bold mb-2">MARY ASEGBA</h2>
-                    <p class="text-gray-300">Fashion Brand • Lassandi, Jalingo</p>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center mr-3">
+                            <i class="fas fa-crown text-white"></i>
+                        </div>
+                        <div>
+                            <h2 class="playfair text-2xl font-bold">MARY ASEGBA</h2>
+                            <p class="text-xs text-gray-300 -mt-1">FASHION BRAND</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">Lassandi, Jalingo</p>
                 </div>
                 
                 <div class="text-center md:text-right">
                     <p class="text-gray-300 mb-2">Deals in sewing beautiful clothes, tote bags, bonnet caps and lots more.</p>
-                    <p class="text-gold font-medium">© 2023 Mary Asegba Fashion Brand. All rights reserved.</p>
+                    <p class="text-gold font-medium">© 2026 Mary Asegba Fashion Brand. All rights reserved.</p>
                 </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>Website designed to showcase the beautiful craftsmanship of Mary Asegba Fashion Brand</p>
             </div>
         </div>
     </footer>
-
-    <!-- Product Detail Modal -->
-    <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
-        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
-            <div class="flex justify-between items-center p-6 border-b">
-                <h3 id="modal-title" class="playfair text-2xl font-bold text-gray-800">Product Details</h3>
-                <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
-            </div>
-            
-            <div class="p-6">
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
-                        <img id="modal-image" src="" alt="Product Image" class="w-full rounded-lg shadow-md">
-                    </div>
-                    <div class="md:w-1/2">
-                        <div class="mb-4">
-                            <span id="modal-category" class="inline-block bg-gold text-white text-xs font-bold px-3 py-1 rounded-full mb-2"></span>
-                            <p id="modal-price" class="text-gold font-bold text-2xl mb-4"></p>
-                        </div>
-                        
-                        <p id="modal-description" class="text-gray-700 mb-6"></p>
-                        
-                        <div class="mb-6">
-                            <h4 class="font-bold text-gray-800 mb-2">Features</h4>
-                            <ul id="modal-features" class="text-gray-600 list-disc pl-5 space-y-1">
-                                <!-- Features will be added here by JavaScript -->
-                            </ul>
-                        </div>
-                        
-                        <div class="flex space-x-4">
-                            <a href="#contact" class="flex-1 bg-gold hover:bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg text-center transition duration-300">
-                                Order Now
-                            </a>
-                            <button id="close-modal-2" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300">
-                                Close
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Success Message -->
     <div id="success-message" class="fixed bottom-4 right-4 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg z-50 hidden">
@@ -528,141 +598,71 @@
             });
         });
 
-        // Product data for modal
+        // Product data for WhatsApp ordering
         const productData = {
             1: {
                 title: "African Print Dress",
-                category: "Clothing",
-                price: "₦15,000",
-                image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                description: "Elegant handmade dress with vibrant African prints, perfect for special occasions. This dress is crafted with high-quality Ankara fabric and features intricate detailing that showcases traditional African craftsmanship.",
-                features: [
-                    "Made with premium Ankara fabric",
-                    "Hand-stitched for quality and durability",
-                    "Available in multiple sizes and custom measurements",
-                    "Vibrant, fade-resistant colors",
-                    "Perfect for weddings, parties, and cultural events"
-                ]
+                price: "₦15,000"
             },
             2: {
                 title: "Canvas Tote Bag",
-                category: "Tote Bag",
-                price: "₦8,500",
-                image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                description: "Stylish and durable handmade tote bag with unique patterns, perfect for everyday use. This spacious bag combines functionality with fashion, making it ideal for work, shopping, or casual outings.",
-                features: [
-                    "Made from durable canvas material",
-                    "Reinforced handles for heavy items",
-                    "Unique African-inspired patterns",
-                    "Spacious interior with inner pocket",
-                    "Eco-friendly and washable material"
-                ]
+                price: "₦8,500"
             },
             3: {
                 title: "Embroidered Bonnet Cap",
-                category: "Bonnet Cap",
-                price: "₦6,500",
-                image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                description: "Hand-embroidered bonnet cap with delicate patterns, offering both style and comfort. This beautifully crafted cap protects from the sun while adding a touch of elegance to any outfit.",
-                features: [
-                    "Hand-embroidered with intricate patterns",
-                    "Adjustable strap for perfect fit",
-                    "Breathable cotton fabric",
-                    "Lightweight and comfortable",
-                    "Available in various colors and designs"
-                ]
+                price: "₦6,500"
             },
             4: {
                 title: "Embroidered Blouse",
-                category: "Clothing",
-                price: "₦12,000",
-                image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                description: "Beautifully embroidered blouse with intricate details, perfect for both casual and formal occasions. The delicate embroidery adds a touch of elegance to this versatile piece.",
-                features: [
-                    "Fine cotton fabric with embroidery",
-                    "Available in various colors",
-                    "Comfortable and breathable",
-                    "Hand-finished details",
-                    "Pairs well with skirts, trousers, or wrappers"
-                ]
+                price: "₦12,000"
             },
             5: {
                 title: "Leather Tote Bag",
-                category: "Tote Bag",
-                price: "₦18,000",
-                image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                description: "Elegant leather tote bag with multiple compartments, combining functionality with style. Made from genuine leather, this bag is designed to last while maintaining its sophisticated appearance.",
-                features: [
-                    "Genuine leather construction",
-                    "Multiple interior compartments",
-                    "Secure zip closure",
-                    "Comfortable shoulder straps",
-                    "Timeless design that never goes out of style"
-                ]
+                price: "₦18,000"
             },
             6: {
                 title: "Fashion Bonnet",
-                category: "Bonnet Cap",
-                price: "₦7,200",
-                image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                description: "Trendy bonnet cap with modern design, offering both protection from the sun and style. This fashionable accessory complements various outfits while providing practical sun protection.",
-                features: [
-                    "Modern, trendy design",
-                    "UV protection fabric",
-                    "Adjustable for perfect fit",
-                    "Lightweight and foldable",
-                    "Easy to care for and maintain"
-                ]
+                price: "₦7,200"
+            },
+            7: {
+                title: "Traditional Outfit",
+                price: "₦25,000"
+            },
+            8: {
+                title: "Patterned Tote Bag",
+                price: "₦9,500"
+            },
+            9: {
+                title: "Sun Protection Cap",
+                price: "₦8,000"
+            },
+            10: {
+                title: "Evening Gown",
+                price: "₦35,000"
             }
         };
 
-        // Product modal functionality
-        const viewDetailButtons = document.querySelectorAll('.view-detail-btn');
-        const productModal = document.getElementById('product-modal');
-        const closeModalButtons = document.querySelectorAll('#close-modal, #close-modal-2');
+        // WhatsApp ordering functionality
+        const orderButtons = document.querySelectorAll('.order-btn');
         
-        viewDetailButtons.forEach(button => {
+        orderButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const productId = button.getAttribute('data-product');
                 const product = productData[productId];
                 
                 if (product) {
-                    document.getElementById('modal-title').textContent = product.title;
-                    document.getElementById('modal-category').textContent = product.category;
-                    document.getElementById('modal-price').textContent = product.price;
-                    document.getElementById('modal-image').src = product.image;
-                    document.getElementById('modal-image').alt = product.title;
-                    document.getElementById('modal-description').textContent = product.description;
+                    // Create WhatsApp message
+                    const phoneNumber = "2348122207484";
+                    const message = `Hello Mary Asegba Fashion Brand! I'm interested in ordering the ${product.title} (${product.price}). Please provide more details about availability, sizes, and payment options.`;
                     
-                    // Clear and populate features
-                    const featuresList = document.getElementById('modal-features');
-                    featuresList.innerHTML = '';
-                    product.features.forEach(feature => {
-                        const li = document.createElement('li');
-                        li.textContent = feature;
-                        featuresList.appendChild(li);
-                    });
+                    // Encode the message for URL
+                    const encodedMessage = encodeURIComponent(message);
                     
-                    // Show modal
-                    productModal.classList.remove('hidden');
-                    document.body.style.overflow = 'hidden';
+                    // Open WhatsApp with pre-filled message
+                    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+                    window.open(whatsappURL, '_blank');
                 }
             });
-        });
-        
-        closeModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                productModal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            });
-        });
-        
-        // Close modal when clicking outside
-        productModal.addEventListener('click', (e) => {
-            if (e.target === productModal) {
-                productModal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
         });
 
         // Contact form submission
