@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Asegba | Fashion Brand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .playfair { font-family: 'Playfair Display', serif; }
+        .poppins { font-family: 'Poppins', sans-serif; }
+        .text-gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        .product-image {
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="poppins bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <h1 class="playfair text-2xl font-bold text-gray-800">MARY ASEGBA</h1>
+                    <span class="ml-2 px-2 py-1 bg-gold text-white text-xs rounded">FASHION BRAND</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 font-medium">About</a>
+                    <a href="#products" class="nav-link text-gray-700 font-medium">Products</a>
+                    <a href="#contact" class="nav-link text-gray-700 font-medium">Contact</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+                <a href="#home" class="block text-gray-700 font-medium">Home</a>
+                <a href="#about" class="block text-gray-700 font-medium">About</a>
+                <a href="#products" class="block text-gray-700 font-medium">Products</a>
+                <a href="#contact" class="block text-gray-700 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-24 pb-20 md:pt-32 md:pb-28 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="playfair text-4xl md:text-6xl font-bold mb-6">Beautiful Handcrafted Fashion</h2>
+                <p class="text-xl md:text-2xl mb-8">Sewing beautiful clothes, tote bags, bonnet caps and lots more</p>
+                <div class="mb-10">
+                    <p class="text-lg mb-2"><i class="fas fa-map-marker-alt text-gold mr-2"></i>Lassandi, Jalingo</p>
+                    <p class="text-lg">Where style meets craftsmanship</p>
+                </div>
+                <a href="#products" class="inline-block bg-gold hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">View Our Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Mary Asegba Fashion Brand</h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Fashion Designer at work" 
+                         class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="playfair text-2xl font-bold text-gray-800 mb-6">Crafting Fashion with Passion</h3>
+                    <p class="text-gray-600 mb-4">Mary Asegba Fashion Brand specializes in creating beautiful, handcrafted clothing and accessories that blend traditional craftsmanship with contemporary style.</p>
+                    <p class="text-gray-600 mb-6">Based in Lassandi, Jalingo, we take pride in every stitch, ensuring that each piece is unique, high-quality, and tailored to make you look and feel exceptional.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="text-center">
+                            <div class="w-16 h-16 rounded-full bg-gold flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-tshirt text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Custom Clothing</h4>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 rounded-full bg-gold flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-shopping-bag text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Tote Bags</h4>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 rounded-full bg-gold flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-hat-cowboy text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800">Bonnet Caps</h4>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 rounded-full bg-gold flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-plus text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-800">And More</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our collection of beautifully crafted fashion items, each made with attention to detail and quality materials.</p>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+            
+            <!-- Product Filters -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" data-filter="all" class="filter-btn px-5 py-2.5 text-sm font-medium rounded-l-lg bg-gold text-white">
+                        All Products
+                    </button>
+                    <button type="button" data-filter="clothing" class="filter-btn px-5 py-2.5 text-sm font-medium bg-gray-200 hover:bg-gray-300 text-gray-800">
+                        Clothing
+                    </button>
+                    <button type="button" data-filter="bags" class="filter-btn px-5 py-2.5 text-sm font-medium bg-gray-200 hover:bg-gray-300 text-gray-800">
+                        Tote Bags
+                    </button>
+                    <button type="button" data-filter="caps" class="filter-btn px-5 py-2.5 text-sm font-medium rounded-r-md bg-gray-200 hover:bg-gray-300 text-gray-800">
+                        Bonnet Caps
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1: Clothing -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="clothing">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Beautiful African Dress" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">African Print Dress</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Clothing</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Elegant handmade dress with vibrant African prints, perfect for special occasions.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦15,000</span>
+                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="1">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2: Tote Bag -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="bags">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Handmade Tote Bag" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Canvas Tote Bag</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Tote Bag</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Stylish and durable handmade tote bag with unique patterns, perfect for everyday use.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦8,500</span>
+                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="2">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3: Bonnet Cap -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="caps">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Bonnet Cap" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Embroidered Bonnet Cap</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Bonnet Cap</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Hand-embroidered bonnet cap with delicate patterns, offering both style and comfort.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦6,500</span>
+                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="3">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4: Clothing -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="clothing">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Modern Top" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Embroidered Blouse</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Clothing</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Beautifully embroidered blouse with intricate details, perfect for both casual and formal occasions.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦12,000</span>
+                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="4">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5: Tote Bag -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="bags">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Leather Tote Bag" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Leather Tote Bag</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Tote Bag</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Elegant leather tote bag with multiple compartments, combining functionality with style.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦18,000</span>
+                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="5">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6: Bonnet Cap -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md product-item" data-category="caps">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Fashionable Cap" 
+                             class="product-image w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="playfair text-xl font-bold text-gray-800">Fashion Bonnet</h3>
+                            <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">Bonnet Cap</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Trendy bonnet cap with modern design, offering both protection from the sun and style.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold text-lg">₦7,200</span>
+                            <button class="view-detail-btn bg-gray-800 hover:bg-black text-white font-medium py-2 px-4 rounded transition duration-300" data-product="6">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-700">Interested in custom designs or bulk orders? <a href="#contact" class="text-gold font-bold hover:underline">Contact us</a> for personalized service.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Reach out to us for orders, custom designs, or any inquiries about our products.</p>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="mb-8">
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg mb-1">Location</h4>
+                                    <p class="text-gray-600">Lassandi, Jalingo, Nigeria</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg mb-1">Email Address</h4>
+                                    <p class="text-gray-600">danielmary0999@gmail.com</p>
+                                    <p class="text-gray-600">mhia.bella@email.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg mb-1">Phone Number</h4>
+                                    <p class="text-gray-600">+234 812 220 7484</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 text-lg mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center text-white">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center text-white">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center text-white">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                        <h3 class="playfair text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
+                        <form id="contact-form">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gold hover:bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="playfair text-2xl font-bold mb-2">MARY ASEGBA</h2>
+                    <p class="text-gray-300">Fashion Brand • Lassandi, Jalingo</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-300 mb-2">Deals in sewing beautiful clothes, tote bags, bonnet caps and lots more.</p>
+                    <p class="text-gold font-medium">© 2023 Mary Asegba Fashion Brand. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h3 id="modal-title" class="playfair text-2xl font-bold text-gray-800">Product Details</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                        <img id="modal-image" src="" alt="Product Image" class="w-full rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="mb-4">
+                            <span id="modal-category" class="inline-block bg-gold text-white text-xs font-bold px-3 py-1 rounded-full mb-2"></span>
+                            <p id="modal-price" class="text-gold font-bold text-2xl mb-4"></p>
+                        </div>
+                        
+                        <p id="modal-description" class="text-gray-700 mb-6"></p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-2">Features</h4>
+                            <ul id="modal-features" class="text-gray-600 list-disc pl-5 space-y-1">
+                                <!-- Features will be added here by JavaScript -->
+                            </ul>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="#contact" class="flex-1 bg-gold hover:bg-yellow-600 text-white font-bold py-3 px-4 rounded-lg text-center transition duration-300">
+                                Order Now
+                            </a>
+                            <button id="close-modal-2" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="success-message" class="fixed bottom-4 right-4 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg z-50 hidden">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-3"></i>
+            <span>Your message has been sent successfully!</span>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Product filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productItems = document.querySelectorAll('.product-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-gold', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+                });
+                
+                button.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
+                button.classList.add('bg-gold', 'text-white');
+                
+                // Filter products
+                const filterValue = button.getAttribute('data-filter');
+                
+                productItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Product data for modal
+        const productData = {
+            1: {
+                title: "African Print Dress",
+                category: "Clothing",
+                price: "₦15,000",
+                image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Elegant handmade dress with vibrant African prints, perfect for special occasions. This dress is crafted with high-quality Ankara fabric and features intricate detailing that showcases traditional African craftsmanship.",
+                features: [
+                    "Made with premium Ankara fabric",
+                    "Hand-stitched for quality and durability",
+                    "Available in multiple sizes and custom measurements",
+                    "Vibrant, fade-resistant colors",
+                    "Perfect for weddings, parties, and cultural events"
+                ]
+            },
+            2: {
+                title: "Canvas Tote Bag",
+                category: "Tote Bag",
+                price: "₦8,500",
+                image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Stylish and durable handmade tote bag with unique patterns, perfect for everyday use. This spacious bag combines functionality with fashion, making it ideal for work, shopping, or casual outings.",
+                features: [
+                    "Made from durable canvas material",
+                    "Reinforced handles for heavy items",
+                    "Unique African-inspired patterns",
+                    "Spacious interior with inner pocket",
+                    "Eco-friendly and washable material"
+                ]
+            },
+            3: {
+                title: "Embroidered Bonnet Cap",
+                category: "Bonnet Cap",
+                price: "₦6,500",
+                image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Hand-embroidered bonnet cap with delicate patterns, offering both style and comfort. This beautifully crafted cap protects from the sun while adding a touch of elegance to any outfit.",
+                features: [
+                    "Hand-embroidered with intricate patterns",
+                    "Adjustable strap for perfect fit",
+                    "Breathable cotton fabric",
+                    "Lightweight and comfortable",
+                    "Available in various colors and designs"
+                ]
+            },
+            4: {
+                title: "Embroidered Blouse",
+                category: "Clothing",
+                price: "₦12,000",
+                image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Beautifully embroidered blouse with intricate details, perfect for both casual and formal occasions. The delicate embroidery adds a touch of elegance to this versatile piece.",
+                features: [
+                    "Fine cotton fabric with embroidery",
+                    "Available in various colors",
+                    "Comfortable and breathable",
+                    "Hand-finished details",
+                    "Pairs well with skirts, trousers, or wrappers"
+                ]
+            },
+            5: {
+                title: "Leather Tote Bag",
+                category: "Tote Bag",
+                price: "₦18,000",
+                image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Elegant leather tote bag with multiple compartments, combining functionality with style. Made from genuine leather, this bag is designed to last while maintaining its sophisticated appearance.",
+                features: [
+                    "Genuine leather construction",
+                    "Multiple interior compartments",
+                    "Secure zip closure",
+                    "Comfortable shoulder straps",
+                    "Timeless design that never goes out of style"
+                ]
+            },
+            6: {
+                title: "Fashion Bonnet",
+                category: "Bonnet Cap",
+                price: "₦7,200",
+                image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Trendy bonnet cap with modern design, offering both protection from the sun and style. This fashionable accessory complements various outfits while providing practical sun protection.",
+                features: [
+                    "Modern, trendy design",
+                    "UV protection fabric",
+                    "Adjustable for perfect fit",
+                    "Lightweight and foldable",
+                    "Easy to care for and maintain"
+                ]
+            }
+        };
+
+        // Product modal functionality
+        const viewDetailButtons = document.querySelectorAll('.view-detail-btn');
+        const productModal = document.getElementById('product-modal');
+        const closeModalButtons = document.querySelectorAll('#close-modal, #close-modal-2');
+        
+        viewDetailButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = button.getAttribute('data-product');
+                const product = productData[productId];
+                
+                if (product) {
+                    document.getElementById('modal-title').textContent = product.title;
+                    document.getElementById('modal-category').textContent = product.category;
+                    document.getElementById('modal-price').textContent = product.price;
+                    document.getElementById('modal-image').src = product.image;
+                    document.getElementById('modal-image').alt = product.title;
+                    document.getElementById('modal-description').textContent = product.description;
+                    
+                    // Clear and populate features
+                    const featuresList = document.getElementById('modal-features');
+                    featuresList.innerHTML = '';
+                    product.features.forEach(feature => {
+                        const li = document.createElement('li');
+                        li.textContent = feature;
+                        featuresList.appendChild(li);
+                    });
+                    
+                    // Show modal
+                    productModal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                productModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Close modal when clicking outside
+        productModal.addEventListener('click', (e) => {
+            if (e.target === productModal) {
+                productModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send the form data to a server here
+            // For this demo, we'll just show a success message
+            
+            // Show success message
+            const successMessage = document.getElementById('success-message');
+            successMessage.classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Highlight active navigation link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-gold');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-gold');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
